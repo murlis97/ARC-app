@@ -52,6 +52,9 @@
     <!-- Waves Effect Plugin Js -->
     <script src="{{ URL::to('plugins/node-waves/waves.js') }}"></script>
 
+    <!-- Slimscroll Js -->
+    <script src="{{ URL::to('plugins\jquery-slimscroll\jquery.slimscroll.js') }}"></script>
+
     <!-- Validation Plugin Js -->
     <script src="{{ URL::to('plugins/jquery-validation/jquery.validate.js') }}"></script>
 
