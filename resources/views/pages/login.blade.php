@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('content')
-<div class="login-page">
+<body class="login-page">
     <div class="login-box">
         <div class="logo">
             <a href="javascript:void(0);">CFM <b>ARC</b></a>
@@ -45,5 +45,5 @@
             </div>
         </div>
     </div>
-</div>
+</body>
 @endsection

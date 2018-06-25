@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -31,10 +31,6 @@
 
 </head>
 
-<body id="body">
-
-    @include('layouts.include.header')
-
 	@yield('content')
 
     @include('layouts.include.footer')
@@ -60,5 +56,5 @@
 
     <!-- Custom Js -->
     <script src="{{ URL::to('js/pages/examples/sign-in.js') }}"></script>
-</body>
+    <script src="../../js/pages/tables/editable-table.js"></script>
 </html>
