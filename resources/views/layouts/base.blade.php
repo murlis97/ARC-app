@@ -23,11 +23,16 @@
     <!-- Animation Css -->
     <link href="{{ URL::to('plugins/animate-css/animate.css') }}" rel="stylesheet" />
 
+    <!--WaitMe Css-->
+    <link href="{{ URL::to('plugins/waitme/waitMe.css') }}" rel="stylesheet" />
+
     <!-- Styles -->
     <link rel="stylesheet" href="{{ URL::to('css/style.css') }}">
     <link rel="stylesheet" href="{{ URL::to('css/materialize.css') }}">
     <link rel="stylesheet" href="{{ URL::to('plugins/bootstrap/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ URL::to('plugins/bootstrap/css/bootstrap-theme.css') }}">
+
+    <link rel="stylesheet" href="{{ URL::to('css/themes/all-themes.css') }}">
 
 </head>
 
@@ -49,12 +54,21 @@
     <script src="{{ URL::to('plugins/node-waves/waves.js') }}"></script>
 
     <!-- Slimscroll Js -->
-    <script src="{{ URL::to('plugins\jquery-slimscroll\jquery.slimscroll.js') }}"></script>
+    <script src="{{ URL::to('plugins/jquery-slimscroll/jquery.slimscroll.js') }}"></script>
 
     <!-- Validation Plugin Js -->
     <script src="{{ URL::to('plugins/jquery-validation/jquery.validate.js') }}"></script>
 
     <!-- Custom Js -->
     <script src="{{ URL::to('js/pages/examples/sign-in.js') }}"></script>
-    <script src="../../js/pages/tables/editable-table.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="{{ URL::to('plugins/bootstrap-select/js/bootstrap-select.js') }}"></script>
+
+    <!-- Wait Me Plugin Js -->
+    <script src="{{ URL::to('plugins/waitme/waitMe.js') }}"></script>
+
+    <!-- Editable Table Plugin Js -->
+    <script src="{{ URL::to('plugins/editable-table/mindmup-editabletable.js') }}"></script>
+    <script src="{{ URL::to('js/pages/tables/editable-table.js') }}"></script>
 </html>
