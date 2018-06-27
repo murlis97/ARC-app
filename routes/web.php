@@ -12,8 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('pages.home');
+    return view('assets.home');
 });
+
+Route::get('/assets', 'AssetsControllers@index');
+
+Route::get('/assets/{asset}', 'AssetsController@show({asset})');
 
 Route::get('/dashboard', function () {
     return view('pages.dashboard');

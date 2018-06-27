@@ -28,13 +28,13 @@
         <div class="menu">
             <ul class="list">
                 <li class="header">MAIN NAVIGATION</li>
-                <li>
+                <li class="active">
                     <a href="/">
                         <i class="material-icons">home</i>
                         <span>My Clients</span>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="/dashboard">
                         <i class="material-icons">text_fields</i>
                         <span>All Clients</span>
