@@ -30,6 +30,9 @@ class CreateAssestsTable extends Migration
             $table->string('ratingSRs', 20); // Rating of SRs
             $table->date('registDate'); // Registration Date
             $table->date('DOADate'); // Deed of Assignment Date
+            $table->date('cutoffDate');
+            $table->boolean('AssetGroup'); // Asset Group or Non Group (Yes -> Group Asset)
+            $table->date('doFirstReview'); // Date of First Review
             $table->string('remarks'); // Remarks
             $table->timestamps();
         });

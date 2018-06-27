@@ -12,10 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('assets.home');
+    $assets = DB::table('assets')->get();
+    return view('assets.home', compact('assets'));
 });
 
-Route::get('/assets', 'AssetsControllers@index');
+Route::get('/assets', 'AssetsController@index');
 
 Route::get('/assets/{asset}', 'AssetsController@show({asset})');
 

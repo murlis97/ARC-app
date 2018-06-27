@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 class AssetsController extends Controller
 {
     public function index(){
-        $assets = Post::all();
-        return view('assets.home', compact('posts'));
+        $assets = Asset::all();
+        return view('assets.home', compact('assets'));
     }
 
     public function show($id){
-        $asset = DB::table('asset')->find($id);
+        $asset = DB::table('assets')->find($id);
         return view('assets.show', compact('asset'));
     }
 }
