@@ -13,6 +13,14 @@
     <!-- title icon -->
     <link rel="shortcut icon" href="{{ URL::to('images/logo-white.png') }}" />
 
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ URL::to('css/style.css') }}">
+    <link rel="stylesheet" href="{{ URL::to('css/materialize.css') }}">
+    <link rel="stylesheet" href="{{ URL::to('plugins/bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ URL::to('plugins/bootstrap/css/bootstrap-theme.css') }}">
+
+    <link rel="stylesheet" href="{{ URL::to('css/themes/all-themes.css') }}">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
@@ -23,16 +31,29 @@
     <!-- Animation Css -->
     <link href="{{ URL::to('plugins/animate-css/animate.css') }}" rel="stylesheet" />
 
+    <!-- Colorpicker Css -->
+    <link href="{{ URL::to('plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css') }}" rel="stylesheet" />
+
+    <!-- Dropzone Css -->
+    <link href="{{ URL::to('plugins/dropzone/dropzone.css') }}" rel="stylesheet">
+
+    <!-- Multi Select Css -->
+    <link href="{{ URL::to('plugins/multi-select/css/multi-select.css') }}" rel="stylesheet">
+
+    <!-- Bootstrap Spinner Css -->
+    <link href="{{ URL::to('plugins/jquery-spinner/css/bootstrap-spinner.css') }}" rel="stylesheet">
+
+    <!-- Bootstrap Tagsinput Css -->
+    <link href="{{ URL::to('plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') }}" rel="stylesheet">
+
+    <!-- Bootstrap Select Css -->
+    <link href="{{ URL::to('plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet" />
+
+    <!-- noUISlider Css -->
+    <link href="{{ URL::to('plugins/nouislider/nouislider.min.css') }}" rel="stylesheet" />
+
     <!--WaitMe Css-->
     <link href="{{ URL::to('plugins/waitme/waitMe.css') }}" rel="stylesheet" />
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ URL::to('css/style.css') }}">
-    <link rel="stylesheet" href="{{ URL::to('css/materialize.css') }}">
-    <link rel="stylesheet" href="{{ URL::to('plugins/bootstrap/css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ URL::to('plugins/bootstrap/css/bootstrap-theme.css') }}">
-
-    <link rel="stylesheet" href="{{ URL::to('css/themes/all-themes.css') }}">
 
 </head>
 
@@ -55,6 +76,33 @@
 
     <!-- Slimscroll Js -->
     <script src="{{ URL::to('plugins/jquery-slimscroll/jquery.slimscroll.js') }}"></script>
+
+    <!-- Bootstrap Colorpicker Js -->
+    <script src="{{ URL::to('plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js') }}"></script>
+
+    <!-- Dropzone Plugin Js -->
+    <script src="{{ URL::to('plugins/dropzone/dropzone.js') }}"></script>
+
+    <!-- Input Mask Plugin Js -->
+    <script src="{{ URL::to('plugins/jquery-inputmask/jquery.inputmask.bundle.js') }}"></script>
+
+    <!-- Multi Select Plugin Js -->
+    <script src="{{ URL::to('plugins/multi-select/js/jquery.multi-select.js') }}"></script>
+
+    <!-- Jquery Spinner Plugin Js -->
+    <script src="{{ URL::to('plugins/jquery-spinner/js/jquery.spinner.js') }}"></script>
+
+    <!-- Bootstrap Tags Input Plugin Js -->
+    <script src="{{ URL::to('plugins/bootstrap-tagsinput/bootstrap-tagsinput.js') }}"></script>
+
+    <!-- noUISlider Plugin Js -->
+    <script src="{{ URL::to('plugins/nouislider/nouislider.js') }}"></script>
+
+    <!-- Autosize Plugin Js -->
+    <script src="../../plugins/autosize/autosize.js"></script>
+
+    <!-- Moment Plugin Js -->
+    <script src="../../plugins/momentjs/moment.js"></script>
 
     <!-- Validation Plugin Js -->
     <script src="{{ URL::to('plugins/jquery-validation/jquery.validate.js') }}"></script>

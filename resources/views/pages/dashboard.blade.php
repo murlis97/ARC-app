@@ -74,15 +74,11 @@
                                 <small>You can edit any columns except header/footer</small>
                             </h2>
                             <ul class="header-dropdown m-r--5">
-                                <li class="dropdown">
-                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                        <i class="material-icons">more_vert</i>
-                                    </a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="javascript:void(0);">Action</a></li>
-                                        <li><a href="javascript:void(0);">Another action</a></li>
-                                        <li><a href="javascript:void(0);">Something else here</a></li>
-                                    </ul>
+                                <li>
+                                    <button type="button" class="btn bg-red waves-effect right">
+                                        <i class="material-icons">save</i>
+                                        <span>SAVE CHANGES</span>
+                                    </button>
                                 </li>
                             </ul>
                         </div>
@@ -90,50 +86,32 @@
                             <table id="mainTable" class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Cost</th>
-                                        <th>Profit</th>
-                                        <th>Fun</th>
+                                        <th>Asset Name</th>
+                                        <th>DOI</th>
+                                        <th>Selling Bank/Institution</th>
+                                        <th>Outstanding Debt</th>
+                                        <th>Acquisition Price</th>
+                                        <th>Acquisition Structure</th>
+                                        <th>Name of the Trust</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Car</td>
-                                        <td>100</td>
-                                        <td>200</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Bike</td>
-                                        <td>330</td>
-                                        <td>240</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Plane</td>
-                                        <td>430</td>
-                                        <td>540</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Yacht</td>
-                                        <td>100</td>
-                                        <td>200</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Segway</td>
-                                        <td>330</td>
-                                        <td>240</td>
-                                        <td>1</td>
-                                    </tr>
+                                    @foreach($assets as $asset)
+                                        <tr>
+                                            <td>{{ $asset->assetName }}</td>
+                                            <td>{{ $asset->doi }}</td>
+                                            <td>{{ $asset->sellingInst }}</td>
+                                            <td>{{ $asset->OSAmt }}</td>
+                                            <td>{{ $asset->acqPrice }}</td>
+                                            <td>{{ $asset->acqStruct }}</td>
+                                            <td>{{ $asset->nameOfTrust }}</td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th><strong>TOTAL</strong></th>
-                                        <th>1290</th>
-                                        <th>1420</th>
-                                        <th>5</th>
+                                        <th><strong>TOTAL NUMBER OF ASSETS : {{ count($assets) }}</strong></th>
+                                        <th></th>
                                     </tr>
                                 </tfoot>
                             </table>

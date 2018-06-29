@@ -1,15 +1,10 @@
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-    <div class="card">
+<div id="card-container" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div id="card" class="card">
         <div class="header bg-red">
             <h2>
-                {{ $asset->assetName }}<small>{{ $asset->doi }}</small>
+                <a href="/assets/{{ $asset->id }}">{{ $asset->assetName }}</a><small>{{ $asset->doi }}</small>
             </h2>
             <ul class="header-dropdown m-r--5">
-                <li>
-                    <a href="javascript:void(0);" data-toggle="cardloading" data-loading-effect="timer" data-loading-color="lightBlue">
-                        <i class="material-icons">loop</i>
-                    </a>
-                </li>
                 <li class="dropdown">
                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <i class="material-icons">more_vert</i>

@@ -10,18 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Asset;
 
-Route::get('/', function () {
-    $assets = DB::table('assets')->get();
-    return view('assets.home', compact('assets'));
-});
+
+Route::get('/', 'AssetsController@index');
 
 Route::get('/assets', 'AssetsController@index');
 
-Route::get('/assets/{asset}', 'AssetsController@show({asset})');
+Route::get('/assets/create', 'AssetsController@create');
+
+Route::get('/assets/{asset}', 'AssetsController@show');
+
+Route::post('/assets', 'AssetsController@store');
 
 Route::get('/dashboard', function () {
-    return view('pages.dashboard');
+    $assets = Asset::all();
+    return view('pages.dashboard', compact('assets'));
 });
 
 Route::get('/login', function () {
