@@ -16,6 +16,15 @@
             <li class="list-group-item">Acq Structure: {{ $asset->acqStruct }}</li>
         </ul>
         @json($asset)
+        <hr>
+        @if(($asset->AssetGroup)==0)
+            @json($asset->nongroup)
+        @else
+            @foreach($asset->group as $g)
+                @json($g)
+                <hr>
+            @endforeach
+        @endif
     </section>
 </body>
 @endsection('content')

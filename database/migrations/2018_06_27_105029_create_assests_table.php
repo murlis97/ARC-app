@@ -19,14 +19,14 @@ class CreateAssestsTable extends Migration
             $table->integer('doi'); // Dealing officer ID
             $table->string('sellingInst', 100); // Name of selling institution or bank
             $table->date('dateofAcq'); // Date of acquistion of asset
-            $table->integer('OSAmt'); // Outstanding Amt
-            $table->integer('acqPrice'); // Acquistion Price
+            $table->float('OSAmt', 15, 2); // Outstanding Amt
+            $table->float('acqPrice', 15, 2); // Acquistion Price
             $table->string('acqStruct', 15); // Acquistion Strucutre
             $table->string('nameOfTrust', 100);
-            $table->integer('ARCInvest'); // CFMARC's investment
-            $table->integer('OtherInvest'); // Seller Bank/FI/Other QIB's investments
-            $table->integer('vos'); // Value of Security
-            $table->string('investRationale', 256); // Investment Rationale
+            $table->float('ARCInvest', 15, 2); // CFMARC's investment
+            $table->float('OtherInvest', 15, 2); // Seller Bank/FI/Other QIB's investments
+            $table->float('vos', 15, 2); // Value of Security
+            $table->string('investRationale', 512); // Investment Rationale
             $table->string('ratingSRs', 20); // Rating of SRs
             $table->date('registDate'); // Registration Date
             $table->date('DOADate'); // Deed of Assignment Date

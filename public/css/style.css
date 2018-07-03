@@ -3684,11 +3684,12 @@ section.content {
 /* Card ======================================== */
 
 #card-container {
-    max-height: 500px;
+    min-height: 400px;
 }
 
 #card {
     min-width: 100%;
+    min-height: 100%;
 }
 
 .card {
