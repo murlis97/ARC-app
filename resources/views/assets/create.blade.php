@@ -52,6 +52,16 @@
                             </div>
 
                             <div class="col-md-3">
+                                <b>Asset Group or Not?</b>
+                                <div class="input-group">
+                                    <input type="checkbox" id="md_checkbox_21" name="AssetGroup" class="filled-in chk-col-red" value="1" onchange="groupFunction()">
+                                    <label for="md_checkbox_21">Check if yes</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row clearfix">
+                            <div class="col-md-3">
                                 <b>Dealing Officer ID</b>
                                 <div class="input-group">
                                     <span class="input-group-addon">
@@ -82,7 +92,7 @@
                                         <i class="material-icons">money</i>
                                     </span>
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="OSAmt" placeholder="In Lakhs">
+                                        <input id="groupinput" type="text" class="form-control" name="OSAmt" placeholder="In Lakhs">
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +104,7 @@
                                         <i class="material-icons">money</i>
                                     </span>
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="acqPrice" placeholder="In Lakhs">
+                                        <input id="groupinput1" type="text" class="form-control" name="acqPrice" placeholder="In Lakhs">
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +140,7 @@
                                         <i class="material-icons">monetization_on</i>
                                     </span>
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="ARCInvest" placeholder="In Lakhs">
+                                        <input id="groupinput2" type="text" class="form-control" name="ARCInvest" placeholder="In Lakhs">
                                     </div>
                                 </div>
                             </div>
@@ -142,7 +152,7 @@
                                         <i class="material-icons">monetization_on</i>
                                     </span>
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="OtherInvest" placeholder="In Lakhs">
+                                        <input id="groupinput3" type="text" class="form-control" name="OtherInvest" placeholder="In Lakhs">
                                     </div>
                                 </div>
                             </div>
@@ -155,7 +165,7 @@
                                         <i class="material-icons">monetization_on</i>
                                     </span>
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="vos" placeholder="In Lakhs">
+                                        <input id="groupinput4" type="text" class="form-control" name="vos" placeholder="In Lakhs">
                                     </div>
                                 </div>
                             </div>
@@ -216,14 +226,6 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-3">
-                                <b>Asset Group or Not?</b>
-                                <div class="input-group">
-                                    <input type="checkbox" id="md_checkbox_21" name="AssetGroup" class="filled-in chk-col-red" value="1">
-                                    <label for="md_checkbox_21">Check if yes</label>
-                                </div>
-                            </div>
-
                             <div class="col-md-6">
                                 <b>Investment Rationale</b>
                                 <div class="input-group">
@@ -263,4 +265,19 @@
         </div>
     </section>
 </body>
+
+<script>
+    // function groupFunction() {
+    //     console.log("Function chalu hai bhai");
+    //     document.getElementById("groupinput").disabled;
+    // }
+    document.getElementById('md_checkbox_21').onchange = function() {
+        console.log("Function chalu hai bhai");
+        document.getElementById('groupinput').disabled = this.checked;
+        document.getElementById('groupinput1').disabled = this.checked;
+        document.getElementById('groupinput2').disabled = this.checked;
+        document.getElementById('groupinput3').disabled = this.checked;
+        document.getElementById('groupinput4').disabled = this.checked;
+    };
+</script>
 @endsection('content')

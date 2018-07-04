@@ -2,7 +2,15 @@
     <div id="card" class="card">
         <div class="header bg-red">
             <h2>
-                <a href="/assets/{{ $asset->id }}">{{ $asset->assetName }}</a><small>{{ $asset->doi }}</small>
+                <a href="/assets/{{ $asset->id }}">{{ $asset->assetName }}</a>
+                <small>
+                    @if(($asset->AssetGroup)==1)
+                        {{ "(Group Asset)" }}
+                    @else
+                        {{ "(Non Group Asset)" }}
+                    @endif
+                    DOI: {{ $asset->user->name }}
+                </small>
             </h2>
             <ul class="header-dropdown m-r--5">
                 <li class="dropdown">
@@ -10,7 +18,7 @@
                         <i class="material-icons">more_vert</i>
                     </a>
                     <ul class="dropdown-menu pull-right">
-                        <li><a href="javascript:void(0);">Edit</a></li>
+                        <li><a href="/assets/{{ $asset->id }}">Edit</a></li>
                     </ul>
                 </li>
             </ul>

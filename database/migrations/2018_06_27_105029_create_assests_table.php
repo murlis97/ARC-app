@@ -16,7 +16,7 @@ class CreateAssestsTable extends Migration
         Schema::create('assets', function (Blueprint $table) {
             $table->increments('id');
             $table->string('assetName', 100); // Asset Name
-            $table->integer('doi'); // Dealing officer ID
+            $table->integer('user_id'); // Dealing officer ID
             $table->string('sellingInst', 100); // Name of selling institution or bank
             $table->date('dateofAcq'); // Date of acquistion of asset
             $table->float('OSAmt', 15, 2); // Outstanding Amt

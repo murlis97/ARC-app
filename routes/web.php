@@ -12,8 +12,9 @@
 */
 use App\Asset;
 
+Route::get('/home', 'AssetsController@index')->name('home');
 
-Route::get('/', 'AssetsController@index');
+Route::get('/', 'AssetsController@index')->name('home');
 
 Route::get('/assets', 'AssetsController@index');
 
@@ -28,6 +29,12 @@ Route::get('/dashboard', function () {
     return view('pages.dashboard', compact('assets'));
 });
 
-Route::get('/login', function () {
-    return view('pages.login');
-});
+Route::get('/login',[ 'as' => 'login', 'uses' => 'SessionsController@create']);
+
+Route::post('/login', 'SessionsController@store');
+
+Route::get('/logout', 'SessionsController@destroy');
+
+Route::get('/register', 'RegistrationController@create');
+
+Route::post('/register', 'RegistrationController@store');

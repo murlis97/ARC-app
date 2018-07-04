@@ -22,10 +22,9 @@
                 </small>
             </div>
             <div class="row">
-                @foreach($assets as $indexKey => $asset)
-                    @include('assets.assetcard')
-                    @if(($indexKey>0)&(($indexKey%2)==0))
-                        <hr>
+                @foreach($assets as $asset)
+                    @if(($asset->user_id)==(auth()->id()))
+                        @include('assets.assetcard')
                     @endif
                 @endforeach
             </div>

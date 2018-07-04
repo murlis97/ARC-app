@@ -16,4 +16,9 @@ class Asset extends Model
     public function group(){
         return $this->hasMany(GroupAsset::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

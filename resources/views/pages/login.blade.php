@@ -9,7 +9,8 @@
         </div>
         <div class="card">
             <div class="body">
-                <form id="sign_in" method="POST" novalidate="novalidate">
+                <form id="sign_in" method="POST" action="/login">
+                    {{ csrf_field() }}
                     <div class="msg">Sign in to start your session</div>
                     <div class="input-group">
                         <span class="input-group-addon">
@@ -42,6 +43,8 @@
                         </div>
                     </div>
                 </form>
+
+                @include('layouts.include.errors')
             </div>
         </div>
     </div>

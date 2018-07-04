@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class AssetsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index(){
         $assets = Asset::orderby('dateofAcq', 'desc')->get();
         return view('assets.home', compact('assets'));
