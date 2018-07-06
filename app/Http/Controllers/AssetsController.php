@@ -28,12 +28,9 @@ class AssetsController extends Controller
     public function store(){
         $this->validate(request(),[
             'assetName' => 'required',
-            'doi' => 'required',
-            'OSAmt' => 'required',
-            'sellingInst' => 'required',
-            'dateofAcq', 'DOADate', 'registDate', 'cutoffDate' => 'date_format:Y-m-d'
+            'user_id' => 'required',
         ]);
         Asset::create(request()->all());
-        return redirect('/');
+        return redirect('/assets/complete');
     }
 }

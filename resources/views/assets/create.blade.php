@@ -23,7 +23,7 @@
                     </ul>
                 </div>
                 <div class="body">
-                    <form method="POST" action="/assets">
+                    <form method="POST" action="/assets/complete">
                         {{ csrf_field() }}
                         <div class="row clearfix">
                             @include('layouts.include.errors')
@@ -68,7 +68,7 @@
                                         <i class="material-icons">account_circle</i>
                                     </span>
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="doi" placeholder="Ex: 32">
+                                        <input type="text" class="form-control" name="user_id" placeholder="Ex: 32">
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@
                                         <i class="material-icons">date_range</i>
                                     </span>
                                     <div class="form-line">
-                                        <input type="text" class="form-control date" name="dateofAcq" placeholder="Ex: 2018-07-25">
+                                        <input type="date" class="form-control date" name="dateofAcq" placeholder="Ex: 2018-07-25">
                                     </div>
                                 </div>
                             </div>
@@ -187,7 +187,7 @@
                                         <i class="material-icons">date_range</i>
                                     </span>
                                     <div class="form-line">
-                                        <input type="text" class="form-control date" name="DOADate" placeholder="Ex: 2018-07-25">
+                                        <input type="date" class="form-control date" name="DOADate" placeholder="Ex: 2018-07-25">
                                     </div>
                                 </div>
                             </div>
@@ -198,7 +198,7 @@
                                         <i class="material-icons">date_range</i>
                                     </span>
                                     <div class="form-line">
-                                        <input type="text" class="form-control date" name="registDate" placeholder="Ex: 2018-07-25">
+                                        <input type="date" class="form-control date" name="registDate" placeholder="Ex: 2018-07-25">
                                     </div>
                                 </div>
                             </div>
@@ -209,7 +209,7 @@
                                         <i class="material-icons">date_range</i>
                                     </span>
                                     <div class="form-line">
-                                        <input type="text" class="form-control date" name="cutoffDate" placeholder="Ex: 2018-07-25">
+                                        <input type="date" class="form-control date" name="cutoffDate" placeholder="Ex: 2018-07-25">
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +221,7 @@
                                         <i class="material-icons">date_range</i>
                                     </span>
                                     <div class="form-line">
-                                        <input type="text" class="form-control date" name="doFirstReview" placeholder="Ex: 2018-07-25">
+                                        <input type="date" class="form-control date" name="doFirstReview" placeholder="Ex: 2018-07-25">
                                     </div>
                                 </div>
                             </div>
@@ -253,7 +253,7 @@
                             <div class="input-group">
                                 <button type="submit" class="btn bg-red btn-block btn-lg waves-effect right">
                                     <i class="material-icons">save</i>
-                                    <span>SAVE CHANGES</span>
+                                    <span>Add Asset</span>
                                 </button>
                             </div>
 
@@ -267,12 +267,7 @@
 </body>
 
 <script>
-    // function groupFunction() {
-    //     console.log("Function chalu hai bhai");
-    //     document.getElementById("groupinput").disabled;
-    // }
     document.getElementById('md_checkbox_21').onchange = function() {
-        console.log("Function chalu hai bhai");
         document.getElementById('groupinput').disabled = this.checked;
         document.getElementById('groupinput1').disabled = this.checked;
         document.getElementById('groupinput2').disabled = this.checked;

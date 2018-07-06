@@ -96,7 +96,7 @@
                                 <thead>
                                     <tr>
                                         <th>Asset Name</th>
-                                        <th>DOI</th>
+                                        <th>Dealing Officer</th>
                                         <th>Selling Bank/Institution</th>
                                         <th>Outstanding Debt</th>
                                         <th>Acquisition Price</th>
@@ -108,7 +108,7 @@
                                     @foreach($assets as $asset)
                                         <tr>
                                             <td>{{ $asset->assetName }}</td>
-                                            <td>{{ $asset->doi }}</td>
+                                            <td>{{ $asset->user->name }}</td>
                                             <td>{{ $asset->sellingInst }}</td>
                                             <td>{{ $asset->OSAmt }}</td>
                                             <td>{{ $asset->acqPrice }}</td>

@@ -13,7 +13,7 @@
                     MY CLIENTS
                 </h2>
                 <small>
-                    <a href="javascript:void(0);" data-toggle="cardloading" data-loading-effect="timer" data-loading-color="lightBlue">
+                    <a href="/" data-toggle="cardloading" data-loading-effect="timer" data-loading-color="lightBlue">
                         <i class="material-icons">loop</i>
                     </a>
                     <a href="/assets/create" data-toggle="cardloading" data-loading-effect="timer" data-loading-color="lightBlue">
