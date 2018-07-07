@@ -49,21 +49,42 @@
         </div>
         <hr>
         @if(($asset->AssetGroup)==0)
-            <ul class="list-group">
-                <li class="list-group-item"><b>Line of Activity:</b> {{ $asset->nongroup->lineOfAct }}</li>
-                <li class="list-group-item"><b>Original Docs:</b> {{ $asset->nongroup->OgDocs }}</li>
-                <li class="list-group-item"><b>RBI Resolution Status:</b> {{ $asset->nongroup->RSRBI }}</li>
-                <li class="list-group-item"><b>Final Resolution Status:</b> {{ $asset->nongroup->finalRS }}</li>
-                <li class="list-group-item"><b>Remarks:</b> {{ $asset->nongroup->remarks }}</li>
-            </ul>
+            @if($asset->nongroup==null)
+                <div class="input-group left">
+                    <a href=" {{ url('assets/'.$asset->id.'/create') }}" class="btn btn-block bg-red btn-lg waves-effect right">
+                        <i class="material-icons">add</i>
+                        <span>Add Company Details</span>
+                    </a>
+                </div>
+            @else
+                <ul class="list-group">
+                    <li class="list-group-item"><b>Line of Activity:</b> {{ $asset->nongroup->lineOfAct }}</li>
+                    <li class="list-group-item"><b>Original Docs:</b> {{ $asset->nongroup->OgDocs }}</li>
+                    <li class="list-group-item"><b>RBI Resolution Status:</b> {{ $asset->nongroup->RSRBI }}</li>
+                    <li class="list-group-item"><b>Final Resolution Status:</b> {{ $asset->nongroup->finalRS }}</li>
+                    <li class="list-group-item"><b>Remarks:</b> {{ $asset->nongroup->remarks }}</li>
+                </ul>
+                <div class="row">
+                    <div class="col-md-6">
+                        @if(($asset->nongroup->ROC)==1)
+                            @include('assets.showROC')
+                        @endif
+                    </div>
+                    <div class="col-md-">
+                        @if(($asset->nongroup->CERSAI)==1)
+                            @include('assets.showCERSAI')
+                        @endif
+                    </div>
+                </div>
+            @endif
         @else
             <h3>Asset Companies</h3>
             <div class="input-group right">
-                    <a href=" {{ url('assets/'.$asset->id.'/group') }}" class="btn bg-red btn-lg waves-effect right">
-                        <i class="material-icons">add</i>
-                        <span>Add Company</span>
-                    </a>
-                </div>
+                <a href=" {{ url('assets/'.$asset->id.'/create') }}" class="btn bg-red btn-lg waves-effect right">
+                    <i class="material-icons">add</i>
+                    <span>Add Company</span>
+                </a>
+            </div>
             @foreach($asset->group as $g)
                 @include('assets.showgroup')
             @endforeach

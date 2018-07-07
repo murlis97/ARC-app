@@ -7,10 +7,19 @@
     <section class="content">
         <div class="card">
             <div class="header">
-                <h2>Add the Non-Group Asset Details</h2>
+                <h2>
+                    Add the Asset Details {{ $asset->assetName }}
+                    <small>
+                        @if(($asset->AssetGroup)==1)
+                            {{ "(Group Asset)" }}
+                        @else
+                            {{ "(Non Group Asset)" }}
+                        @endif
+                    </small>
+                </h2>
             </div>
             <div class="body">
-                <form method="POST" action="/assets/non-group">
+                <form method="POST" action="{{ url('assets/'.$asset->id.'/non-group') }}">
                     {{ csrf_field() }}
                     @include('layouts.include.errors')
 

@@ -24,11 +24,11 @@ Route::get('/assets/{asset}', 'AssetsController@show');
 
 Route::post('/assets/complete', 'GroupController@store');
 
-Route::post('/assets/non-group', 'GroupController@ngstore');
+Route::post('/assets/{asset}/non-group', 'GroupController@ngstore');
 
-Route::get('/assets/{asset}/group', 'GroupController@create');
+Route::get('/assets/{asset}/create', 'GroupController@create');
 
-Route::post('/assets/{asset}', 'GroupController@gstore');
+Route::post('/assets/{asset}/group', 'GroupController@gstore');
 
 Route::get('/dashboard', function () {
     $assets = Asset::all();

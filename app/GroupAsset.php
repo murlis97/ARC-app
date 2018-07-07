@@ -12,4 +12,14 @@ class GroupAsset extends Model
     {
         return $this-> belongsTo(Asset::class);
     }
+
+    public function ROC()
+    {
+        return $this->hasOne(ROC::class);
+    }
+
+    public function cersai()
+    {
+        return $this->hasOne(cersai::class);
+    }
 }

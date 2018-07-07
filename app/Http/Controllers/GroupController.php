@@ -15,7 +15,14 @@ class GroupController extends Controller
     }
 
     public function create(Asset $asset){
-        return view('assets.gdetails',compact('asset'));
+        if($asset->AssetGroup==1)
+            return view('assets.gdetails', compact('asset'));
+        else{
+            if($asset->nongroup==null)
+                return view('assets.ngdetails', compact('asset'));
+            else
+                return redirect('/assets/'.$asset->id);
+        }
     }
 
     public function store(){
@@ -36,22 +43,17 @@ class GroupController extends Controller
 
         $asset = Asset::create(request()->all());
 
-        if($asset->AssetGroup==0)
-            return view('assets.ngdetails', compact('asset'));
-        else
-            return view('assets.gdetails', compact('asset'));
+        return redirect('/assets/'.$asset->id);
     }
 
-    public function ngstore(){
-        $asset = request()->session()->get('asset');
-        $asset_id = \DB::table('assets')->where('assetName', $asset->assetName)->value('id');
+    public function ngstore(Asset $asset){
         $validatedData = $this->validate(request(),[
             'lineOfAct' => 'required',
             'RSRBI' => 'required',
         ]);
 
         $ngasset = NonGroupAsset::create([
-            'asset_id' => $asset_id,
+            'asset_id' => $asset->id,
             'ROC' => request('ROC'),
             'CERSAI' => request('CERSAI'),
             'lineOfAct' => request('lineOfAct'),

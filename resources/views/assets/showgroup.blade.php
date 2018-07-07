@@ -36,6 +36,14 @@
                     </ul>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-6">
+                    @include('assets.showROC')
+                </div>
+                <div class="col-md-6">
+                    @include('assets.showCERSAI')
+                </div>
+            </div>
         </div>
     </div>
 </div>
